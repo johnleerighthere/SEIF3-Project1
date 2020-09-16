@@ -1,0 +1,227 @@
+
+.rating,
+.move-counter,
+.timer,
+.restart-btn {
+    width: 100%;
+}
+
+.rating {
+  font-size: 1.4em;
+  color: #FFEA00;
+  display: inline;
+}
+
+h1 {
+  text-align: center;
+  font-size: 300%;
+  margin-block-start: 0.3em;
+  margin-block-end: 0.3em;
+  font-family: 'Architects Daughter', cursive;
+}
+
+h2 {
+  text-align: center;
+}
+
+.howToPlay {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  font-family: 'Indie Flower', cursive;
+}
+
+.help-content {
+  width: 80%;
+  margin: auto;
+  padding: 0;
+  position: relative;
+  top: 5%;
+  background-color: #EFEBE9;
+  border: 1px solid #808080;
+  border-radius: 0.5em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  animation: animateTop 0.4s;
+}
+
+
+.game-card-img{
+  width: 120px;
+  height: 120px;
+  visibility: hidden;
+}
+
+.game-card{
+  background-color: black;
+  border: 1px solid;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px #292629;
+}
+
+.game-status-details{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #7c8799;
+  margin-bottom: 25px;
+  max-width: 36%;
+  text-align: center;
+  padding: 0.3em;
+  border: 2px solid black;
+  border-radius: 15px;
+  vertical-align: middle;
+}
+
+.game-board {
+  background-color: #7c8799;
+  border-spacing: 25px 25px;
+  border-radius: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid black;
+}
+
+.restart-button-div{
+  max-width: 50%;
+  margin: 1.5em auto;
+  text-align: center;
+}
+
+/* Game Over Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  width: 80%;
+  margin: auto;
+  padding: 0;
+  position: relative;
+  top: 5%;
+  background-color: #EFEBE9;
+  border: 1px solid #808080;
+  border-radius: 0.5em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  animation: animateTop 0.4s;
+}
+
+.modal-header {
+  border-bottom: 1px solid #D7CCC8;
+  padding: 0.6em 1em;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.modal-body {
+  padding: 1.6em 0.3em 1em;
+}
+
+.modal-body .message {
+  text-align: center;
+}
+
+.modal-body .message p {
+  margin-bottom: 0.5em;
+}
+
+.game-over-icons {
+  animation: animateIcons 3s linear infinite;
+  position: relative;
+}
+
+.modal-footer {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  padding: 0 1em 1.5em;
+}
+
+.modal-footer button {
+  padding: 0.3em 1em;
+  width: 50%;
+}
+
+.close {
+  font-size: 2em;
+  float: right;
+  margin-right: 0.8em;
+  margin-top: 0.2em;
+  font-weight: bold;
+  color: #3E2723;
+  position: relative;
+  animation: animateCloseIcon 5s linear 2s infinite;
+}
+
+.close:hover, .close:focus {
+  color: #8D6E63;
+  cursor: pointer;
+}
+
+.show-img {
+  visibility: visible;
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+.show-modal {
+  display: block;
+}
+
+.restart-btn {
+  background-color: #7c8799;
+  max-width: 50%;
+  border-radius: 25px;
+  font-size: 2em;
+  border: 2px solid black;
+}
+
+
+
+
+
+/* Media queries */
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .game-card, .game-card-img {
+    width: 5.5em;
+    height: 5.5em;
+}
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .game-status-details {
+      display: block;
+  }
+
+  .rating,
+  .move-counter,
+  .timer,
+  .restart-btn {
+      width: initial;
+  }
+
+  .game-card, .game-card-img {
+      width: 6em;
+      height: 6em;
+  }
+}
